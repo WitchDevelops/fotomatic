@@ -4,9 +4,8 @@
   --dark-brown: #4a4a4a;
   --light-brown: #979797;
   --lightest-brown: #c6c1c1;
-  --white: #FFF;
+  --light-peach: #f3f3f3;
   --olive-green: #656e49;
-  --green-contrast: #9dc20b;
 }
 
 /* Universal Styles */
@@ -14,6 +13,8 @@
 html {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .main-content {
@@ -50,25 +51,39 @@ html {
   display: block;
 }
 
+.image-container:hover {
+  transform: scale(1.2);
+  transition-duration: 150ms;
+  transition-timing-function: ease-out;
+}
+
+.image-container:not(:hover) {
+  transition-duration: 100ms;
+  transition-timing-function: ease-in;
+}
+
 @media only screen and (max-width: 760px) {
   .main-content {
     top: 2.5625rem;
   }
 }
 
-/* Header */
+/* nav bar */
+/* fix this later */
 
 header {
   position: fixed;
   width: 100%;
-  border-bottom: solid 1px #c6c1c1;
-  background-color: white;
+  border-bottom: solid 1px var(--light-brown);
+  background-color: var(--light-peach);
+  z-index: 1;
 }
 
 header .content {
   display: flex;
   align-items: center;
-  padding: 1.875rem;
+  justify-content: center;
+  height: 3rem;
 }
 
 header .logo {
@@ -81,14 +96,19 @@ header nav ul {
 }
 
 nav li {
-  padding-left: 3.5rem;
+  padding: 3.5rem;
 }
 
 nav a {
   vertical-align: bottom;
   line-height: 1.6;
   font-size: 1rem;
-  color: #4a4a4a;
+  color: var(--dark-brown);
+}
+
+nav a:active,
+nav a:hover {
+  font-weight: bold;
 }
 
 header .icon {
@@ -127,29 +147,34 @@ header .mobile {
 
   header .mobile .button {
     padding: .1875rem .5rem;
-    background-color: var(--green-contrast);
+    background-color: var(--darkest-brown);
     line-height: 1.6;
     color: white;
   }
 }
 
-/* Sign Up Section */
+/* hero Section */
 
 #sign-up-section {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  height: 43.5rem;
+  height: 95vh;
 }
 
 #sign-up-cta {
   padding: 0 5rem 2.5rem 5rem;
   border-radius: 8px;
   background-color: var(--olive-green);
+  opacity: 85%;
   -webkit-box-shadow: 0px 4px 24px 0px rgba(40, 39, 39, 1);
   -moz-box-shadow: 0px 4px 24px 0px rgba(40, 39, 39, 1);
   box-shadow: 0px 4px 24px 0px rgba(40, 39, 39, 1);
   margin: auto 6.25rem;
+}
+
+#sign-up-cta:hover {
+  opacity: 100%;
 }
 
 #sign-up-cta .content {
@@ -186,7 +211,7 @@ header .mobile {
 #sign-up-cta .button {
   margin-top: 1.625rem;
   padding: 1.25rem 7.25rem;
-  border-radius: 8px;
+
 }
 
 
@@ -203,6 +228,8 @@ header .mobile {
     height: auto;
     background-color: transparent;
     border: none;
+    box-shadow: none;
+    text-align: center;
   }
 
   #sign-up-cta .content {
@@ -241,35 +268,42 @@ header .mobile {
 #features-section {
   display: flex;
   justify-content: space-between;
-  padding: 4rem 5%;
-  background-color: #f3f3f3;
+  background-color: var(--light-peach);
 }
 
 .feature {
-  flex: 1;
-  padding: 2rem;
-  margin: 0px 1.25rem;
-  background-color: white;
+  flex-shrink: 1;
+  width: 50%;
 }
 
 .feature .image-container {
-  width: 90%;
-  height: 65%;
-  margin: 0 auto;
+  flex-shrink: 1;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.feature .image-container img {
+  width: 100%;
+}
+
+.feature .content {
+padding: 3rem;
+text-align: center;
 }
 
 .feature h2 {
   padding-bottom: .5rem;
   font-size: 2.25rem;
   font-weight: bold;
-  color: #4a4a4a;
+  color: var(--dark-brown);
 }
 
 .feature h3 {
   font-size: 1rem;
   line-height: 1.2;
   font-weight: 300;
-  color: #4a4a4a;
+  color: var(--dark-brown)
 }
 
 @media only screen and (max-width: 890px) {
@@ -300,13 +334,12 @@ header .mobile {
 /* Filters Section */
 
 #filters-section {
-  padding: 4rem 0;
-  background-color: #4a4a4a;
+  background-color: var(--dark-brown);
 }
 
 #filters-section .content {
-  padding: 0 .625rem;
-  margin-bottom: 5rem;
+  padding: 4rem;
+  text-align: center;
 }
 
 #filters-section .content h2 {
@@ -320,11 +353,15 @@ header .mobile {
   line-height: 1.4;
   font-weight: 300;
   color: white;
+  margin-top: 1rem;
 }
 
 #filters-section .images-container {
-  max-width: 100%;
-  padding: 0 1%;
+  display: flex;
+}
+
+#filters-section .images-container img {
+  width: 100%;
 }
 
 @media only screen and (max-width: 760px) {
@@ -360,24 +397,34 @@ header .mobile {
 /* Quotes Section */
 
 #quotes-section {
-  background-color: #f3f3f3;
+  background-color: var(--light-peach);
+  padding: 6rem;
 }
 
-#quotes-section content {
-  padding: 5rem 0;
+#quotes-section .quote {
+  margin: auto;
+  width: 60%;
 }
 
-#quotes-section quote {
-  padding-right: 1.875rem;
+#quotes-section .quote-text {
   font-family: "Palatino", serif;
-  font-size: 1.875rem;
+  font-size: 1.5rem;
+  padding: 5rem;
   line-height: 1.1;
   font-style: italic;
-  color: #4a4a4a;
+  color: var(--dark-brown);
+  text-align: center;
 }
 
-#quotes-section quote-citation {
-  height: 1.875rem;
+#quotes-section #photo-society-logo {
+  display: block;
+  height: 2.5rem;
+  float: right;
+  padding: 1rem;
+}
+
+#quotation-icon {
+  height: 2rem;
 }
 
 @media only screen and (max-width: 760px) {
@@ -385,7 +432,7 @@ header .mobile {
     padding: 1.875rem .625rem;
   }
 
-  #quotes-section quote {
+  #quotes-section .quote {
     font-size: 1.5rem;
     line-height: 1.4;
   }
@@ -397,10 +444,60 @@ header .mobile {
   }
 }
 
+/* about us section */
+#about {
+  text-align: center;
+  padding: 4rem;
+  background-image: 
+  linear-gradient(to bottom, rgba(136,173,215,0),rgba(74,74,74,0.9)),
+  url('../images/pexels-alex-andrews-1983037.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+  color: white;
+}
+
+#about .content h2 {
+  font-size: 2.25rem;
+    font-weight: bold;
+    color: white;
+}
+
+#about .content h3 {
+  font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 300;
+    color: white;
+    margin: 2rem auto 3.5rem auto;
+}
+
+.team-cards {
+  display: flex;
+ justify-content: space-between;
+  justify-items: center;
+  flex-shrink: 1;
+}
+
+.person-card {
+  height: 400px;
+  width: 30%;
+  background-color: rgba(151, 151, 151, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+}
+
+.person-card img {
+  padding: 2rem;
+  border-radius: 50%;
+}
+
+#about .content .team-cards .person-card h2 {
+  color: var(--darkest-brown);
+}
+
 /* Footer */
 
 footer {
-  background-color: #9b9b9b;
+  background-color: var(--darkest-brown);
   padding: 1.5rem 2rem;
 }
 
@@ -408,10 +505,30 @@ footer .content {
   color: white;
   display: flex;
   font-size: .75rem;
+  padding-bottom: 1rem;
 }
 
 footer .copyright {
   flex-grow: 1;
+}
+
+footer p {
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover,
+footer a:active {
+  color: var(--lightest-brown);
+}
+
+#GitHub-logo {
+  height: 1rem;
 }
 
 @media only screen and (min-width: 760px) {

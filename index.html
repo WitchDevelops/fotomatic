@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="./resources/css/reset.css">
   <link rel="stylesheet" href="./resources/css/style.css">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
   <!-- Header -->
@@ -20,15 +20,15 @@
       <nav class="desktop">
         <ul>
           <li><a href="#features-section">Product detail</a></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="https://www.instagram.com/">Follow us <img class="icon" src="./resources/images/instagram.png" alt="instagram icon"></a></li>
+          <li><a href="#about">About us</a></li>
+          <li><a href="https://www.instagram.com/" target="_blank">Follow us <img class="icon" src="./resources/images/instagram.png" alt="instagram icon"></a></li>
         </ul>
       </nav>
       <nav class="mobile">
         <ul>
-          <li><a href="#"><img src="./resources/images/ic-logo.svg" alt="logo icon"></a></li>
+          <li><a href="index.html"><img src="./resources/images/ic-logo.svg" alt="logo icon"></a></li>
           <li><a href="#features-section"><img src="./resources/images/ic-product-detail.svg" alt="product details icon"></a></li>
-          <li><a href="#"><img src="./resources/images/ic-about-us.svg" alt="about us icon"></a></li>
+          <li><a href="#about"><img src="./resources/images/ic-about-us.svg" alt="about us icon"></a></li>
           <li><a href="#" class="button">Join us</a></li>
         </ul>
       </nav>
@@ -61,7 +61,7 @@
       <div class="feature">
         <div class="center">
           <div class="image-container">
-            <img src="images/feature-1.png" />
+            <img src="./resources/images/feature-1.png" alt="camera lens being held in a way one can look inside and see the shutter"/>
           </div>
           <div class="content">
             <h2>Advanced, automatic, instant</h2>
@@ -72,7 +72,7 @@
       <div class="feature">
         <div class="center">
           <div class="image-container">
-            <img src="images/feature-2.png" />
+            <img src="./resources/images/feature-2.png" alt="closeup of the camera lens that shows premium craftsmanship"/>
           </div>
           <div class="content">
             <h2>Beautifully crafted inside-out</h2>
@@ -90,26 +90,56 @@
       </div>
       <div class="images-container">
         <div class="image-container">
-          <img src="./resources/images/filter-1.png" />
+          <img src="./resources/images/filter-1.png" alt="example of filter 1, looks more soft and rosy. Focus on female hands holding a rose"/>
         </div>
         <div class="image-container">
-          <img src="./resources/images/filter-2.png" />
+          <img src="./resources/images/filter-2.png" alt="example of filter 2, cherry blossom" />
         </div>
         <div class="image-container">
-          <img src="./resources/images/filter-3.png" />
+          <img src="./resources/images/filter-3.png" alt="example of filter 3, purplish tint, man holding a vintage camera"/>
         </div>
         <div class="image-container extra">
-          <img src="./resources/images/filter-4.png" />
+          <img src="./resources/images/filter-4.png" alt="example of filter 4, bluish mountain landscape"/>
         </div>
       </div>
     </div>
 
-    <!-- Quotes Section
+    <!-- Quotes Section -->
     <div id="quotes-section">
-      <div class="content center">
-        <span class="quote">“It’s truly something that could create a brand new photography Renaissance”</span>
-        <img class="quote-citation" src="./resources/images/photography-logo.png" />
+      <div class="quote">
+        <span><img id="quotation-icon" src="./resources/images/quote-left-solid.svg" alt="opening quotation mark licon"/></span>
+        <span class="quote-text">It’s truly something that could create a brand new photography Renaissance</span>
+      <img id="photo-society-logo" src="./resources/images/photography-logo.png" />
+     </div>
+    </div>
+
+    <!-- About Us section -->
+    <div id="about">
+      <div class="content">
+        <h2>Meet the team</h2>
+        <h3>We are working hard to provide you innovation in the highest quality, straight to your doorstep.</h3>
+        <div class="team-cards">
+          <div class="person-card image-container">
+            <img src="./resources/images/staff/allie.png" alt="woman with pink hair"/>
+            <h2>Allie</h2>
+            <p></p>
+          </div>
+          <div class="person-card image-container">
+            <img src="./resources/images/staff/andy.png" alt="man from behind, wearing a beanie and looking at a mountainrange"/>
+            <h2>Andy</h2>
+          </div>
+          <div class="person-card image-container">
+            <img src="./resources/images/staff/jessica.png" alt="woman in a poncho, standing on a dirt road"/>
+            <h2>Jessica</h2>
+          </div>
+        </div>
       </div>
+    </div>
+
+    <!--second cta-->
+    <!--fix it-->
+    <div class="content">
+      <div class="button">Join the waiting list</div>
     </div>
 
     <!-- Footer -->
@@ -118,6 +148,7 @@
         <span class="copyright">© 2016  Fotomatic, All Rights Reserved</span>
         <span class="location">Designed in NYC</span>
       </div>
+      <p>Coded by Dominika Wojewska  <a href="https://github.com/WitchDevelops" target="_blank" noreferrer noopener><span><img id="GitHub-logo" src="./resources/images/pngfind.com-github-logo-png-1766942.png" alt="GitHub logo"/></span>  WitchDevelops</a> © 2022</p>
     </footer>
 
   </div>
