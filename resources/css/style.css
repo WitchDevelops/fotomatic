@@ -407,10 +407,6 @@ header .mobile {
   margin: auto;
   align-items: center;
   justify-items: center;
-  /* background-image: url(../images/quote-left-solid.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-background-position: center; */
 }
 
 /* text element */
@@ -425,7 +421,7 @@ blockquote {
 
 /* quotation mark */
 #quotation-icon {
-  height: 2rem;
+ 
   align-self: start;
   justify-self: end;
 }
