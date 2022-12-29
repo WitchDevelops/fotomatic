@@ -19,12 +19,13 @@ html {
 
 .main-content {
   position: relative;
-  top: 5.3125rem; /* To offset for fixed header. */
+  top: 5.3125rem;
+  /* To offset for fixed header. */
 }
 
 .banner {
-     background-image: 
-    linear-gradient(to left, rgba(136,173,215,0),rgba(74,74,74,0.9)),
+  background-image:
+    linear-gradient(to left, rgba(136, 173, 215, 0), rgba(74, 74, 74, 0.9)),
     url('../images/banner-landingpage.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -53,13 +54,12 @@ html {
 
 .image-container:hover {
   transform: scale(1.2);
-  transition-duration: 150ms;
-  transition-timing-function: ease-out;
+  border-radius: 8px;
+  transition: all 200ms ease-out;
 }
 
 .image-container:not(:hover) {
-  transition-duration: 100ms;
-  transition-timing-function: ease-in;
+  transition: all 200ms ease-in;
 }
 
 @media only screen and (max-width: 760px) {
@@ -288,8 +288,8 @@ header .mobile {
 }
 
 .feature .content {
-padding: 3rem;
-text-align: center;
+  padding: 3rem;
+  text-align: center;
 }
 
 .feature h2 {
@@ -396,36 +396,45 @@ text-align: center;
 
 /* Quotes Section */
 
+/* section container */
 #quotes-section {
-  background-color: var(--light-peach);
-  padding: 6rem;
-}
-
-#quotes-section .quote {
+  height: 15vh;
+  width: 65vw;
+  padding: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+  gap: 2rem;
   margin: auto;
-  width: 60%;
+  align-items: center;
+  justify-items: center;
+  /* background-image: url(../images/quote-left-solid.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+background-position: center; */
 }
 
-#quotes-section .quote-text {
+/* text element */
+blockquote {
   font-family: "Palatino", serif;
   font-size: 1.5rem;
-  padding: 5rem;
   line-height: 1.1;
   font-style: italic;
   color: var(--dark-brown);
   text-align: center;
 }
 
-#quotes-section #photo-society-logo {
-  display: block;
-  height: 2.5rem;
-  float: right;
-  padding: 1rem;
-}
-
+/* quotation mark */
 #quotation-icon {
   height: 2rem;
+  align-self: start;
+  justify-self: end;
 }
+/* logo */
+#photo-society-logo {
+  align-self: end;
+  justify-self: end;
+}
+
 
 @media only screen and (max-width: 760px) {
   #quotes-section content {
@@ -448,31 +457,31 @@ text-align: center;
 #about {
   text-align: center;
   padding: 4rem;
-  background-image: 
-  linear-gradient(to bottom, rgba(136,173,215,0),rgba(74,74,74,0.9)),
-  url('../images/pexels-alex-andrews-1983037.jpg');
-background-repeat: no-repeat;
-background-size: cover;
+  background-image:
+    linear-gradient(to bottom, rgba(136, 173, 215, 0), rgba(74, 74, 74, 0.9)),
+    url('../images/pexels-alex-andrews-1983037.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   color: white;
 }
 
 #about .content h2 {
   font-size: 2.25rem;
-    font-weight: bold;
-    color: white;
+  font-weight: bold;
+  color: white;
 }
 
 #about .content h3 {
   font-size: 1rem;
-    line-height: 1.4;
-    font-weight: 300;
-    color: white;
-    margin: 2rem auto 3.5rem auto;
+  line-height: 1.4;
+  font-weight: 300;
+  color: white;
+  margin: 2rem auto 3.5rem auto;
 }
 
 .team-cards {
   display: flex;
- justify-content: space-between;
+  justify-content: space-between;
   justify-items: center;
   flex-shrink: 1;
 }
