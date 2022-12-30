@@ -398,9 +398,8 @@ header .mobile {
 
 /* section container */
 #quotes-section {
-  height: 15vh;
-  width: 65vw;
-  padding: 5rem;
+  width: 40vw;
+  margin: 5rem auto !important;
   display: grid;
   grid-template-columns: 1fr 10fr 1fr;
   gap: 2rem;
@@ -421,17 +420,18 @@ blockquote {
 
 /* quotation mark */
 #quotation-icon {
- 
+  max-height: 4rem;
   align-self: start;
   justify-self: end;
 }
+
 /* logo */
 #photo-society-logo {
   align-self: end;
   justify-self: end;
 }
 
-
+/*
 @media only screen and (max-width: 760px) {
   #quotes-section content {
     padding: 1.875rem .625rem;
@@ -448,11 +448,12 @@ blockquote {
     margin: auto;
   }
 }
+*/
 
 /* about us section */
 #about {
   text-align: center;
-  padding: 4rem;
+
   background-image:
     linear-gradient(to bottom, rgba(136, 173, 215, 0), rgba(74, 74, 74, 0.9)),
     url('../images/pexels-alex-andrews-1983037.jpg');
@@ -461,13 +462,19 @@ blockquote {
   color: white;
 }
 
-#about .content h2 {
+@media screen and (min-width: 430px) {
+  #about {
+    padding: 4rem;
+  }
+}
+
+#about h2 {
   font-size: 2.25rem;
   font-weight: bold;
   color: white;
 }
 
-#about .content h3 {
+#about h3 {
   font-size: 1rem;
   line-height: 1.4;
   font-weight: 300;
@@ -475,16 +482,24 @@ blockquote {
   margin: 2rem auto 3.5rem auto;
 }
 
+/* flex container */
 .team-cards {
   display: flex;
-  justify-content: space-between;
-  justify-items: center;
-  flex-shrink: 1;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 430px) {
+  .team-cards {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+  }
 }
 
 .person-card {
-  height: 400px;
-  width: 30%;
+
   background-color: rgba(151, 151, 151, 0.5);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -492,11 +507,30 @@ blockquote {
 }
 
 .person-card img {
-  padding: 2rem;
   border-radius: 50%;
+  width: 60%;
+  height: auto;
+  margin: auto;
 }
 
-#about .content .team-cards .person-card h2 {
+.person-name {
+  color: white;
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-family: inherit;
+}
+
+/* ipad!!! */
+
+@media screen and (min-width: 430px) {
+  .person-card {
+    padding: 2rem;
+    height: 400px;
+    width: 30%;
+  }
+}
+
+#about .team-cards .person-card h2 {
   color: var(--darkest-brown);
 }
 
