@@ -486,6 +486,7 @@ blockquote {
   height: 400px;
   width: 30%;
   background-color: rgba(151, 151, 151, 0.5);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: 8px;
 }
