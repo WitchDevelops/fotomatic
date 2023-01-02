@@ -474,6 +474,11 @@ blockquote {
   color: white;
 }
 
+.margins {
+  width: 50%;
+text-align: left;
+}
+
 @media screen and (min-width: 430px) {
   #about {
     padding: 4rem 0;
