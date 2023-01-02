@@ -24,3 +24,5 @@ First, design. it was dated, so I tweaked it a bit. Then, accessibility. Starter
 * improve the accordion (open tab closes when opeing a new one)
 * add second CTA
 * fix responsiveness
+* re-color
+* change font faces
