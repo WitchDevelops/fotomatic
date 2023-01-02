@@ -17,13 +17,41 @@ html {
   overflow-x: hidden;
 }
 
-.main-content {
-  position: relative;
-  top: 5.3125rem;
-  /* To offset for fixed header. */
+h1 {
+  font-size: 3.125rem;
 }
 
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 300;
+}
+
+section {
+  width: 60vw;
+  margin: auto;
+}
+
+.section-title {
+  padding: 3rem 20rem 0rem 20rem;
+}
+
+.section-subtitle {
+  width: 40%;
+  padding: 3rem 20rem;
+  text-align: left;
+  margin-left: 0 !important;
+}
+
+
 .banner {
+  width: 100vw;
+  position: relative;
+  top: 3rem;
   background-image:
     linear-gradient(to left, rgba(136, 173, 215, 0), rgba(74, 74, 74, 0.9)),
     url('../images/banner-landingpage.jpg');
@@ -69,12 +97,10 @@ html {
 }
 
 /* nav bar */
-/* fix this later */
 
 header {
   position: fixed;
-  width: 100%;
-  border-bottom: solid 1px var(--light-brown);
+  width: 100vw;
   background-color: var(--light-peach);
   z-index: 1;
 }
@@ -82,44 +108,56 @@ header {
 header .content {
   display: flex;
   align-items: center;
-  justify-content: center;
   height: 3rem;
+  background-color: white;
 }
 
 header .logo {
-  flex: 1;
+  width: 7rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+  padding: 0 2rem;
+  background-color: black;
+  color: white;
 }
 
 header nav ul {
   display: flex;
   height: 3rem;
+  padding: 0 2rem;
 }
 
+
+
 nav li {
-  padding: 3.5rem;
+  padding: 0 2rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li:hover {
+  background-color: black;
+  color: white;
 }
 
 nav a {
-  vertical-align: bottom;
-  line-height: 1.6;
   font-size: 1rem;
   color: var(--dark-brown);
 }
 
-nav a:active,
-nav a:hover {
-  font-weight: bold;
+header a:active,
+header a:hover {
+  color: white;
+  background-color: black;
 }
 
-header .icon {
-  width: 1rem;
-  padding-left: .75rem;
-}
 
-header .mobile {
-  display: none;
-}
-
+/* mediaaaaaa queries navbar
 @media only screen and (max-width: 760px) {
   header .desktop {
     display: none;
@@ -152,6 +190,8 @@ header .mobile {
     color: white;
   }
 }
+*/
+
 
 /* hero Section */
 
@@ -170,7 +210,7 @@ header .mobile {
   -webkit-box-shadow: 0px 4px 24px 0px rgba(40, 39, 39, 1);
   -moz-box-shadow: 0px 4px 24px 0px rgba(40, 39, 39, 1);
   box-shadow: 0px 4px 24px 0px rgba(40, 39, 39, 1);
-  margin: auto 6.25rem;
+  margin: auto;
 }
 
 #sign-up-cta:hover {
@@ -186,15 +226,7 @@ header .mobile {
   color: white;
 }
 
-#sign-up-cta h1 {
-  font-size: 2.75rem;
-}
-
-#sign-up-cta h2 {
-  font-size: 2.25rem;
-}
-
-#sign-up-cta span strong {
+#sign-up-cta strong {
   font-weight: bold;
 }
 
@@ -211,10 +243,9 @@ header .mobile {
 #sign-up-cta .button {
   margin-top: 1.625rem;
   padding: 1.25rem 7.25rem;
-
 }
 
-
+/* 
 @media only screen and (max-width: 760px) {
   #sign-up-section {
     align-items: center;
@@ -249,6 +280,9 @@ header .mobile {
   }
 }
 
+*/
+
+/*
 @media only screen and (max-width: 450px) {
   #sign-up-section {
     height: 20rem;
@@ -262,6 +296,8 @@ header .mobile {
     font-size: 2rem;
   }
 }
+
+*/
 
 /* Features Section */
 
@@ -408,6 +444,14 @@ header .mobile {
   justify-items: center;
 }
 
+#quotation-background {
+  position: absolute;
+  z-index: -1;
+  height: 10%;
+  opacity: 0.5;
+  transform: translate(120px, 30px);
+}
+
 /* text element */
 blockquote {
   font-family: "Palatino", serif;
@@ -450,13 +494,50 @@ blockquote {
 }
 */
 
-/* about us section */
-#about {
-  text-align: center;
+/* FAQ section */
 
+
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  width: 50%;
+  padding: 18px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  display: block;
+  margin: auto;
+}
+
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  width: 50%;
+  margin: auto;
+}
+
+
+
+/* about us section */
+
+#about {
+  width: 100vw;
   background-image:
     linear-gradient(to bottom, rgba(136, 173, 215, 0), rgba(74, 74, 74, 0.9)),
-    url('../images/pexels-alex-andrews-1983037.jpg');
+    url('../images/pexels-alex-andrews-1203803.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
@@ -464,21 +545,13 @@ blockquote {
 
 @media screen and (min-width: 430px) {
   #about {
-    padding: 4rem;
+    padding: 4rem 0;
   }
 }
 
-#about h2 {
-  font-size: 2.25rem;
-  font-weight: bold;
-  color: white;
-}
 
 #about h3 {
-  font-size: 1rem;
-  line-height: 1.4;
-  font-weight: 300;
-  color: white;
+
   margin: 2rem auto 3.5rem auto;
 }
 
@@ -488,27 +561,33 @@ blockquote {
   flex-direction: column;
   align-content: center;
   align-items: center;
+  width: 70%;
+  margin: auto;
 }
+
 
 @media screen and (min-width: 430px) {
   .team-cards {
     flex-direction: row;
-    justify-content: space-between;
-    gap: 2rem;
+    justify-content: space-around;
+    gap: 3rem;
   }
 }
 
 .person-card {
-
   background-color: rgba(151, 151, 151, 0.5);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: 8px;
+  padding: 3rem;
+  height: 470px;
+  width: 30%;
 }
 
 .person-card img {
   border-radius: 50%;
   width: 60%;
+  max-width: 250px;
   height: auto;
   margin: auto;
 }
@@ -518,21 +597,40 @@ blockquote {
   margin-top: 2rem;
   font-size: 2rem;
   font-family: inherit;
+  text-align: center;
 }
 
-/* ipad!!! */
+.person-card p {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.person-card h3 {
+  text-align: left;
+}
+
+
+
+
+
+/* ipad!!! 
 
 @media screen and (min-width: 430px) {
   .person-card {
     padding: 2rem;
-    height: 400px;
     width: 30%;
   }
 }
 
-#about .team-cards .person-card h2 {
-  color: var(--darkest-brown);
+#about .team-cards .person-card h3 {
+  text-align: left;
+  margin-top: 1.5rem;
+  font-size: 1rem;
 }
+
+p {
+  margin-top: 2rem;
+} */
 
 /* Footer */
 
