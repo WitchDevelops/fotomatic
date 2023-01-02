@@ -17,13 +17,39 @@ html {
   overflow-x: hidden;
 }
 
-.main-content {
-  position: relative;
-  /* what height is the nav bar
-  /* To offset for fixed header. */
+h1 {
+  font-size: 3.125rem;
 }
 
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 300;
+}
+
+section {
+  width: 60vw;
+  margin: auto;
+}
+
+.section-title {
+  padding: 3rem 20rem 0rem 20rem;
+}
+
+.section-subtitle {
+  width: 40%;
+  padding: 3rem 20rem;
+  text-align: left;
+  margin-left: 0 !important;
+}
+
+
 .banner {
+  width: 100vw;
   background-image:
     linear-gradient(to left, rgba(136, 173, 215, 0), rgba(74, 74, 74, 0.9)),
     url('../images/banner-landingpage.jpg');
@@ -85,27 +111,36 @@ header .content {
 }
 
 header .logo {
-width: 7rem;
-height: 3rem;
-display: flex;
-justify-content: center;
-align-items: center;
-margin-right: auto;
-padding: 0 2rem;
-background-color: black;
-color: white;
+  width: 7rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+  padding: 0 2rem;
+  background-color: black;
+  color: white;
 }
 
 header nav ul {
   display: flex;
+  height: 3rem;
+  padding: 0 2rem;
 }
+
+
 
 nav li {
   padding: 0 2rem;
   height: 3rem;
-display: flex;
-justify-content: center;
-align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li:hover {
+  background-color: black;
+  color: white;
 }
 
 nav a {
@@ -115,18 +150,8 @@ nav a {
 
 header a:active,
 header a:hover {
-  font-weight: bold;
   color: white;
   background-color: black;
-}
-
-header .icon {
- height: 1.5rem;
-  padding: 0 0.75rem;
-}
-
-header .mobile {
-  display: none;
 }
 
 
@@ -199,15 +224,7 @@ header .mobile {
   color: white;
 }
 
-#sign-up-cta h1 {
-  font-size: 2.75rem;
-}
-
-#sign-up-cta h2 {
-  font-size: 2.25rem;
-}
-
-#sign-up-cta span strong {
+#sign-up-cta strong {
   font-weight: bold;
 }
 
@@ -224,10 +241,9 @@ header .mobile {
 #sign-up-cta .button {
   margin-top: 1.625rem;
   padding: 1.25rem 7.25rem;
-
 }
 
-
+/* 
 @media only screen and (max-width: 760px) {
   #sign-up-section {
     align-items: center;
@@ -262,6 +278,9 @@ header .mobile {
   }
 }
 
+*/
+
+/*
 @media only screen and (max-width: 450px) {
   #sign-up-section {
     height: 20rem;
@@ -275,6 +294,8 @@ header .mobile {
     font-size: 2rem;
   }
 }
+
+*/
 
 /* Features Section */
 
@@ -473,39 +494,45 @@ blockquote {
 
 /* FAQ section */
 
+
+
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
   background-color: #eee;
   color: #444;
   cursor: pointer;
+  width: 50%;
   padding: 18px;
-  width: 100%;
-  text-align: left;
   border: none;
+  text-align: left;
   outline: none;
+  font-size: 15px;
   transition: 0.4s;
+  display: block;
+  margin: auto;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion:hover {
+.active,
+.accordion:hover {
   background-color: #ccc;
 }
 
-/* Style the accordion panel. Note: hidden by default */
 .panel {
   padding: 0 18px;
   background-color: white;
-  display: none;
-  overflow: hidden;
-  max-height: 0,
+  max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+  width: 50%;
+  margin: auto;
 }
+
+
 
 /* about us section */
 
 #about {
-  text-align: center;
+  width: 100vw;
   background-image:
     linear-gradient(to bottom, rgba(136, 173, 215, 0), rgba(74, 74, 74, 0.9)),
     url('../images/pexels-alex-andrews-1203803.jpg');
@@ -514,28 +541,15 @@ blockquote {
   color: white;
 }
 
-.margins {
-  width: 50%;
-text-align: left;
-}
-
 @media screen and (min-width: 430px) {
   #about {
     padding: 4rem 0;
   }
 }
 
-#about h2 {
-  font-size: 2.25rem;
-  font-weight: bold;
-  color: white;
-}
 
 #about h3 {
-  font-size: 1rem;
-  line-height: 1.4;
-  font-weight: 300;
-  color: white;
+
   margin: 2rem auto 3.5rem auto;
 }
 
@@ -556,7 +570,7 @@ text-align: left;
     justify-content: space-around;
     gap: 3rem;
   }
-} 
+}
 
 .person-card {
   background-color: rgba(151, 151, 151, 0.5);
@@ -576,20 +590,24 @@ text-align: left;
   margin: auto;
 }
 
+.person-name {
+  color: white;
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-family: inherit;
+  text-align: center;
+}
+
 .person-card p {
   margin-top: 2rem;
+  text-align: center;
 }
 
 .person-card h3 {
   text-align: left;
 }
 
-.person-name {
-  color: white;
-  margin-top: 2rem;
-  font-size: 2rem;
-  font-family: inherit;
-}
+
 
 
 
