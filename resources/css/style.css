@@ -421,6 +421,14 @@ header .mobile {
   justify-items: center;
 }
 
+#quotation-background {
+  position: absolute;
+  z-index: -1;
+  height: 10%;
+  opacity: 0.5;
+  transform: translate(120px, 30px);
+}
+
 /* text element */
 blockquote {
   font-family: "Palatino", serif;
@@ -468,7 +476,7 @@ blockquote {
   text-align: center;
   background-image:
     linear-gradient(to bottom, rgba(136, 173, 215, 0), rgba(74, 74, 74, 0.9)),
-    url('../images/pexels-alex-andrews-1983037.jpg');
+    url('../images/pexels-alex-andrews-1203803.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
