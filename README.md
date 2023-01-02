@@ -9,17 +9,17 @@ I didn't like the styles provided by CodeCademy, as in my eyes they were a bit o
 
 # Tech
 - semantic HTML5,
-- vanilla CSS
+- vanilla CSS,
+- vanilla JavaScript
 
 # Features
 * fully responsive design;
 * hover effects using CSS transitions and pseudoclasses;
 * glassmorphic effect in the "about" section;
+* accordion menu animated with JS;
 * simple sign-up form for a mailing list using POST method
 
 # TO-DO
 * add email form
-* fix the navbar styles
-* improve about us section
 * add second CTA
 * fix responsiveness
