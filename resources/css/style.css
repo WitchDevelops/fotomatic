@@ -466,7 +466,6 @@ blockquote {
 /* about us section */
 #about {
   text-align: center;
-
   background-image:
     linear-gradient(to bottom, rgba(136, 173, 215, 0), rgba(74, 74, 74, 0.9)),
     url('../images/pexels-alex-andrews-1983037.jpg');
@@ -477,7 +476,7 @@ blockquote {
 
 @media screen and (min-width: 430px) {
   #about {
-    padding: 4rem;
+    padding: 4rem 0;
   }
 }
 
@@ -501,22 +500,27 @@ blockquote {
   flex-direction: column;
   align-content: center;
   align-items: center;
+  width: 70%;
+  margin: auto;
 }
+
 
 @media screen and (min-width: 430px) {
   .team-cards {
     flex-direction: row;
-    justify-content: space-between;
-    gap: 2rem;
+    justify-content: space-around;
+    gap: 3rem;
   }
-}
+} 
 
 .person-card {
-
   background-color: rgba(151, 151, 151, 0.5);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: 8px;
+  padding: 3rem;
+  height: 470px;
+  width: 30%;
 }
 
 .person-card img {
@@ -527,6 +531,14 @@ blockquote {
   margin: auto;
 }
 
+.person-card p {
+  margin-top: 2rem;
+}
+
+.person-card h3 {
+  text-align: left;
+}
+
 .person-name {
   color: white;
   margin-top: 2rem;
@@ -534,19 +546,26 @@ blockquote {
   font-family: inherit;
 }
 
-/* ipad!!! */
+
+
+/* ipad!!! 
 
 @media screen and (min-width: 430px) {
   .person-card {
     padding: 2rem;
-    height: 400px;
     width: 30%;
   }
 }
 
-#about .team-cards .person-card h2 {
-  color: var(--darkest-brown);
+#about .team-cards .person-card h3 {
+  text-align: left;
+  margin-top: 1.5rem;
+  font-size: 1rem;
 }
+
+p {
+  margin-top: 2rem;
+} */
 
 /* Footer */
 
