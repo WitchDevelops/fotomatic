@@ -19,7 +19,7 @@ html {
 
 .main-content {
   position: relative;
-  top: 5.3125rem;
+  /* what height is the nav bar
   /* To offset for fixed header. */
 }
 
@@ -69,12 +69,10 @@ html {
 }
 
 /* nav bar */
-/* fix this later */
 
 header {
   position: fixed;
-  width: 100%;
-  border-bottom: solid 1px var(--light-brown);
+  width: 100vw;
   background-color: var(--light-peach);
   z-index: 1;
 }
@@ -82,44 +80,57 @@ header {
 header .content {
   display: flex;
   align-items: center;
-  justify-content: center;
   height: 3rem;
+  background-color: white;
 }
 
 header .logo {
-  flex: 1;
+width: 7rem;
+height: 3rem;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-right: auto;
+padding: 0 2rem;
+background-color: black;
+color: white;
 }
 
 header nav ul {
   display: flex;
-  height: 3rem;
 }
 
 nav li {
-  padding: 3.5rem;
+  padding: 0 2rem;
+  height: 3rem;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 nav a {
-  vertical-align: bottom;
-  line-height: 1.6;
   font-size: 1rem;
   color: var(--dark-brown);
 }
 
-nav a:active,
-nav a:hover {
+header a:active,
+header a:hover {
   font-weight: bold;
+  color: white;
+  background-color: black;
 }
 
 header .icon {
-  width: 1rem;
-  padding-left: .75rem;
+ height: 1.5rem;
+  padding: 0 0.75rem;
 }
 
 header .mobile {
   display: none;
 }
 
+
+/* mediaaaaaa queries navbar
 @media only screen and (max-width: 760px) {
   header .desktop {
     display: none;
@@ -152,6 +163,8 @@ header .mobile {
     color: white;
   }
 }
+*/
+
 
 /* hero Section */
 
@@ -170,7 +183,7 @@ header .mobile {
   -webkit-box-shadow: 0px 4px 24px 0px rgba(40, 39, 39, 1);
   -moz-box-shadow: 0px 4px 24px 0px rgba(40, 39, 39, 1);
   box-shadow: 0px 4px 24px 0px rgba(40, 39, 39, 1);
-  margin: auto 6.25rem;
+  margin: auto;
 }
 
 #sign-up-cta:hover {
@@ -509,6 +522,7 @@ blockquote {
 .person-card img {
   border-radius: 50%;
   width: 60%;
+  max-width: 250px;
   height: auto;
   margin: auto;
 }
