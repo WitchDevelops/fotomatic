@@ -50,6 +50,8 @@ section {
 
 .banner {
   width: 100vw;
+  position: relative;
+  top: 3rem;
   background-image:
     linear-gradient(to left, rgba(136, 173, 215, 0), rgba(74, 74, 74, 0.9)),
     url('../images/banner-landingpage.jpg');
