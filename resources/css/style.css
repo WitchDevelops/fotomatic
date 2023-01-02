@@ -1,4 +1,4 @@
-/* variables declaration */
+/********************** variables **********************/
 :root {
   --darkest-brown: #282727;
   --dark-brown: #4a4a4a;
@@ -8,7 +8,7 @@
   --olive-green: #656e49;
 }
 
-/* Universal Styles */
+/********************** styles **********************/
 
 html {
   font-family: "Roboto", sans-serif;
@@ -16,6 +16,8 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+
+/********************** typography **********************/
 
 h1 {
   font-size: 3.125rem;
@@ -27,17 +29,14 @@ h2 {
 
 h3 {
   font-size: 1rem;
-  line-height: 1.2;
+  line-height: 1.4;
   font-weight: 300;
 }
 
-section {
-  width: 60vw;
-  margin: auto;
-}
+/********************** sections **********************/
 
 .section-title {
-  padding: 3rem 20rem 0rem 20rem;
+  padding: 3rem 10rem;
 }
 
 .section-subtitle {
@@ -47,18 +46,7 @@ section {
   margin-left: 0 !important;
 }
 
-
-.banner {
-  width: 100vw;
-  position: relative;
-  top: 3rem;
-  background-image:
-    linear-gradient(to left, rgba(136, 173, 215, 0), rgba(74, 74, 74, 0.9)),
-    url('../images/banner-landingpage.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+/********************** buttons **********************/
 
 .button {
   border-radius: 8px;
@@ -71,6 +59,8 @@ section {
   background-color: var(--dark-brown);
   cursor: pointer;
 }
+
+/********************** images **********************/
 
 .image-container {
   overflow: hidden;
@@ -90,19 +80,16 @@ section {
   transition: all 200ms ease-in;
 }
 
-@media only screen and (max-width: 760px) {
-  .main-content {
-    top: 2.5625rem;
-  }
-}
-
-/* nav bar */
+/********************** nav bar **********************/
 
 header {
   position: fixed;
+  top: 0;
   width: 100vw;
   background-color: var(--light-peach);
   z-index: 1;
+  transition: top 0.3s;
+
 }
 
 header .content {
@@ -130,8 +117,6 @@ header nav ul {
   padding: 0 2rem;
 }
 
-
-
 nav li {
   padding: 0 2rem;
   height: 3rem;
@@ -156,41 +141,23 @@ header a:hover {
   background-color: black;
 }
 
+/********************** hero **********************/ 
 
-/* mediaaaaaa queries navbar
-@media only screen and (max-width: 760px) {
-  header .desktop {
-    display: none;
-  }
-
-  header .mobile {
-    display: block;
-    width: 100%;
-  }
-
-  header .content {
-    padding: .5rem 0;
-  }
-
-  header .mobile ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-  }
-
-  header .mobile li {
-    padding: 0;
-  }
-
-  header .mobile .button {
-    padding: .1875rem .5rem;
-    background-color: var(--darkest-brown);
-    line-height: 1.6;
-    color: white;
-  }
+.banner {
+  width: 100vw;
+  position: relative;
+  top: 3rem;
+  background-image:
+    linear-gradient(to left, rgba(136, 173, 215, 0), rgba(74, 74, 74, 0.9)),
+    url('../images/banner-landingpage.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-*/
+
+
+
+
 
 
 /* hero Section */
@@ -238,66 +205,13 @@ header a:hover {
 #sign-up-cta .striking {
   font-family: "Rubik", sans-serif;
   padding-bottom: .75rem;
+  text-align: center;
 }
 
 #sign-up-cta .button {
   margin-top: 1.625rem;
   padding: 1.25rem 7.25rem;
 }
-
-/* 
-@media only screen and (max-width: 760px) {
-  #sign-up-section {
-    align-items: center;
-    justify-content: center;
-    height: 28rem;
-  }
-
-  #sign-up-cta {
-    position: static;
-    width: auto;
-    height: auto;
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
-    text-align: center;
-  }
-
-  #sign-up-cta .content {
-    margin-top: 0;
-  }
-
-  #sign-up-cta .email {
-    display: none;
-  }
-
-  #sign-up-cta h1 {
-    font-size: 3.125rem;
-  }
-
-  #sign-up-cta h2 {
-    font-size: 2.25rem;
-  }
-}
-
-*/
-
-/*
-@media only screen and (max-width: 450px) {
-  #sign-up-section {
-    height: 20rem;
-  }
-
-  #sign-up-cta h1 {
-    font-size: 2.25rem;
-  }
-
-  #sign-up-cta h2 {
-    font-size: 2rem;
-  }
-}
-
-*/
 
 /* Features Section */
 
@@ -496,7 +410,9 @@ blockquote {
 
 /* FAQ section */
 
-
+#FAQ {
+  height: 70vh;
+}
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
@@ -520,7 +436,8 @@ blockquote {
 }
 
 .panel {
-  padding: 0 18px;
+  font-family: inherit;
+  padding: 0 1.5rem;
   background-color: white;
   max-height: 0;
   overflow: hidden;
@@ -529,7 +446,10 @@ blockquote {
   margin: auto;
 }
 
-
+.panel p {
+  padding: 2rem;
+  line-height: 1.5rem;
+}
 
 /* about us section */
 
