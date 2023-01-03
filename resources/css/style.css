@@ -6,6 +6,7 @@
   --lightest-brown: #c6c1c1;
   --light-peach: #f3f3f3;
   --olive-green: #656e49;
+
 }
 
 /********************** styles **********************/
@@ -20,7 +21,9 @@ html {
 /********************** typography **********************/
 
 h1 {
-  font-size: 3.125rem;
+  font-family: "azonixregular", Arial, sans-serif;
+  font-size: 6rem;
+  text-align: center;
 }
 
 h2 {
@@ -203,7 +206,7 @@ header a:hover {
 }
 
 #sign-up-cta .striking {
-  font-family: "Rubik", sans-serif;
+  font-family: "azonixregular", Arial, sans-serif;
   padding-bottom: .75rem;
   text-align: center;
 }
