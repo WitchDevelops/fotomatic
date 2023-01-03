@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;1,300&display=swap');
+
 /********************** variables **********************/
 :root {
   --darkest-brown: #282727;
@@ -7,12 +9,14 @@
   --light-peach: #f3f3f3;
   --olive-green: #656e49;
 
+  --ff-fancy: "azonixregular", Arial, sans-serif;
+  --ff-main: "Plus Jakarta Sans", sans-serif;
 }
 
 /********************** styles **********************/
 
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--ff-main);
   font-size: 16px;
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -21,7 +25,7 @@ html {
 /********************** typography **********************/
 
 h1 {
-  font-family: "azonixregular", Arial, sans-serif;
+  font-family: var(--ff-fancy);
   font-size: 6rem;
   text-align: center;
 }
@@ -152,7 +156,7 @@ header a:hover {
   top: 3rem;
   background-image:
     linear-gradient(to left, rgba(136, 173, 215, 0), rgba(74, 74, 74, 0.9)),
-    url('../images/banner-landingpage.jpg');
+    url('../images/Hero.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -201,7 +205,8 @@ header a:hover {
 }
 
 #sign-up-cta .cursive {
-  font-family: "Damion", cursive;
+  letter-spacing: 3px;
+  font-size: 1rem;
   text-align: center;
 }
 
