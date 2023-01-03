@@ -9,3 +9,5 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 }
+
+/* this is not working for some reason */

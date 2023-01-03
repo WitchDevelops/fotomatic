@@ -430,25 +430,41 @@ blockquote {
   margin: auto;
 }
 
-.active,
-.accordion:hover {
-  background-color: #ccc;
+.accordionTitle {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  width: 50%;
+  padding: 18px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+
+  display: block;
+  margin: auto;
 }
 
-.panel {
+.accordionContent {
   font-family: inherit;
   padding: 0 1.5rem;
   background-color: white;
-  max-height: 0;
-  overflow: hidden;
   transition: max-height 0.2s ease-out;
   width: 50%;
   margin: auto;
 }
 
-.panel p {
+.accordionContent p {
   padding: 2rem;
   line-height: 1.5rem;
+}
+
+.accordionTitle + .accordionContent {
+	display: none;
+}
+
+.accordionTitle.is-open + .accordionContent {
+	display: block;
 }
 
 /* about us section */
