@@ -1,40 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;1,300&display=swap');
+
 /********************** variables **********************/
 :root {
-  --darkest-brown: #282727;
-  --dark-brown: #4a4a4a;
-  --light-brown: #979797;
-  --lightest-brown: #c6c1c1;
-  --light-peach: #f3f3f3;
-  --olive-green: #656e49;
 
+  /* color variables */
+  --off-white: #F8FDFE;
+  --grey-light: #E3E3E4;
+  --accent: #8CE8D3;
+  --accent-hover: #26BC98;
+  --off-black: #242F3C;
+
+  /* font variables */
+
+  --ff-fancy: "azonixregular", Arial, sans-serif;
+  --ff-main: "Plus Jakarta Sans", sans-serif;
+
+  --fw-thin: 300;
+  --fw-regular: 400;
+  --fw-bold: 700;
 }
 
 /********************** styles **********************/
 
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--ff-main);
+  font-weight: var(--fw-regular);
   font-size: 16px;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
 /********************** typography **********************/
+/* type sizes using golden ratio */
 
 h1 {
-  font-family: "azonixregular", Arial, sans-serif;
-  font-size: 6rem;
+  font-family: var(--ff-fancy);
+  font-size: 11.089rem;
   text-align: center;
+
 }
 
 h2 {
-  font-size: 2.25rem;
+  font-size: 6.854rem;
 }
 
 h3 {
-  font-size: 1rem;
-  line-height: 1.4;
-  font-weight: 300;
+  font-size: 4.236rem;
 }
+
+h4 {
+  font-size: 2.618rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+/********************** animations **********************/
+
+.focus-in-contract {
+	-webkit-animation: focus-in-contract 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+	        animation: focus-in-contract 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+}
+
+ /* ----------------------------------------
+ * animation focus-in-contract
+ * ---------------------------------------- */
+
+ @-webkit-keyframes focus-in-contract {
+  0% {
+    letter-spacing: 1em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes focus-in-contract {
+  0% {
+    letter-spacing: 1em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+ /* ----------------------------------------
+ * animation scale-in-center
+ * ---------------------------------------- */
+
+.scale-in-center {
+	-webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+}
+
+/* delayed by 2 seconds */
+
+.scale-in-center-d2 {
+	-webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
+	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
+}
+
+/* delayed by 3 seconds */
+
+.scale-in-center-d3 {
+	-webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
+	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
+}
+
+/* delayed by 4 seconds */
+
+.scale-in-center-d4 {
+	-webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4s both;
+	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4s both;
+}
+
+ @-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
 
 /********************** sections **********************/
 
@@ -52,16 +171,24 @@ h3 {
 /********************** buttons **********************/
 
 .button {
-  border-radius: 8px;
-  background-color: var(--darkest-brown);
-  color: var(--white);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  font-size: 1.618rem;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  background-color: var(--accent);
+  color: var(--off-black);
+  border-radius: 99px;
 }
 
 .button:hover,
 .button:active {
-  background-color: var(--dark-brown);
+  background-color: var(--accent-hover);
   cursor: pointer;
 }
+
+
+
 
 /********************** images **********************/
 
@@ -152,7 +279,7 @@ header a:hover {
   top: 3rem;
   background-image:
     linear-gradient(to left, rgba(136, 173, 215, 0), rgba(74, 74, 74, 0.9)),
-    url('../images/banner-landingpage.jpg');
+    url('../images/Hero.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -196,25 +323,23 @@ header a:hover {
   color: white;
 }
 
-#sign-up-cta strong {
-  font-weight: bold;
+strong {
+  font-weight: var(--fw-bold);
 }
 
-#sign-up-cta .cursive {
-  font-family: "Damion", cursive;
+.accent {
+  letter-spacing: 3px;
+  font-size: 1rem;
   text-align: center;
 }
 
-#sign-up-cta .striking {
+.striking {
   font-family: "azonixregular", Arial, sans-serif;
   padding-bottom: .75rem;
   text-align: center;
 }
 
-#sign-up-cta .button {
-  margin-top: 1.625rem;
-  padding: 1.25rem 7.25rem;
-}
+
 
 /* Features Section */
 
