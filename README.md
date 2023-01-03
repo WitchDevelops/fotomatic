@@ -22,6 +22,5 @@ First, design. it was dated, so I tweaked it a bit. Then, accessibility. Starter
 
 # TO-DO
 * add email form
-* add second CTA
+* fix accordion styling
 * fix responsiveness
-* re-color
