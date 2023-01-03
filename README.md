@@ -15,14 +15,13 @@ First, design. it was dated, so I tweaked it a bit. Then, accessibility. Starter
 # Features
 * fully responsive design;
 * hover effects using CSS transitions and pseudoclasses;
-* glassmorphic effect in the "about" section;
+* CSS animations using keyframes;
+* glassmorphic effects;
 * accordion menu animated with JS;
 * simple sign-up form for a mailing list using POST method.
 
 # TO-DO
 * add email form
-* improve the accordion (open tab closes when opeing a new one)
 * add second CTA
 * fix responsiveness
 * re-color
-* change font faces
