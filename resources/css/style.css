@@ -8,7 +8,8 @@
   --grey-light: #E3E3E4;
   --accent: #8CE8D3;
   --accent-hover: #26BC98;
-  --off-black: #242F3C;
+  --grey-v-dark: #242F3C;
+  --off-black: #0B0F13;
 
   /* font variables */
 
@@ -26,169 +27,176 @@ html {
   font-family: var(--ff-main);
   font-weight: var(--fw-regular);
   font-size: 16px;
+  color: var(--off-white);
+  background-color: var(--grey-light);
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
+
 /********************** typography **********************/
 /* type sizes using golden ratio */
+/* font-size: 11.089rem;
+   font-size: 6.854rem;
+   font-size: 4.236rem;
+   font-size: 2.618rem;
+   font-size: 1rem; */
 
 h1 {
   font-family: var(--ff-fancy);
-  font-size: 11.089rem;
-  text-align: center;
-
-}
-
-h2 {
-  font-size: 6.854rem;
-}
-
-h3 {
   font-size: 4.236rem;
-}
-
-h4 {
-  font-size: 2.618rem;
+  text-align: center;
+  padding: 1rem 0;
 }
 
 p {
   font-size: 1rem;
+  line-height: 1.7rem;
+  font-weight: var(--regular);
 }
+
+/* additional typography styles */
+strong {
+  font-weight: var(--fw-bold);
+}
+
+.accent {
+  letter-spacing: 7px;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
 
 /********************** animations **********************/
 
 .focus-in-contract {
-	-webkit-animation: focus-in-contract 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
-	        animation: focus-in-contract 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+  -webkit-animation: focus-in-contract 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
+  animation: focus-in-contract 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
 }
 
- /* ----------------------------------------
+/* ----------------------------------------
  * animation focus-in-contract
  * ---------------------------------------- */
 
- @-webkit-keyframes focus-in-contract {
+@-webkit-keyframes focus-in-contract {
   0% {
     letter-spacing: 1em;
     -webkit-filter: blur(12px);
-            filter: blur(12px);
+    filter: blur(12px);
     opacity: 0;
   }
+
   100% {
     -webkit-filter: blur(0px);
-            filter: blur(0px);
+    filter: blur(0px);
     opacity: 1;
   }
 }
+
 @keyframes focus-in-contract {
   0% {
     letter-spacing: 1em;
     -webkit-filter: blur(12px);
-            filter: blur(12px);
+    filter: blur(12px);
     opacity: 0;
   }
+
   100% {
     -webkit-filter: blur(0px);
-            filter: blur(0px);
+    filter: blur(0px);
     opacity: 1;
   }
 }
 
- /* ----------------------------------------
+/* ----------------------------------------
  * animation scale-in-center
  * ---------------------------------------- */
 
-.scale-in-center {
-	-webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
-	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
-}
-
-/* delayed by 2 seconds */
+/* delayed a bit */
 
 .scale-in-center-d2 {
-	-webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
-	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
+  -webkit-animation: scale-in-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
+  animation: scale-in-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
 }
 
-/* delayed by 3 seconds */
+/* delayed more */
 
 .scale-in-center-d3 {
-	-webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
-	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
+  -webkit-animation: scale-in-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.2s both;
+  animation: scale-in-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.2s both;
 }
 
-/* delayed by 4 seconds */
+/* delayed the most */
 
 .scale-in-center-d4 {
-	-webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4s both;
-	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4s both;
+  -webkit-animation: scale-in-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.4s both;
+  animation: scale-in-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.4s both;
 }
 
- @-webkit-keyframes scale-in-center {
+@-webkit-keyframes scale-in-center {
   0% {
     -webkit-transform: scale(0);
-            transform: scale(0);
+    transform: scale(0);
     opacity: 1;
   }
+
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     opacity: 1;
   }
 }
+
 @keyframes scale-in-center {
   0% {
     -webkit-transform: scale(0);
-            transform: scale(0);
+    transform: scale(0);
     opacity: 1;
   }
+
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     opacity: 1;
   }
 }
 
-
-
-
-
-
-
-/********************** sections **********************/
-
-.section-title {
-  padding: 3rem 10rem;
-}
-
-.section-subtitle {
-  width: 40%;
-  padding: 3rem 20rem;
-  text-align: left;
-  margin-left: 0 !important;
-}
 
 /********************** buttons **********************/
 
-.button {
+button {
   padding: 1.5rem;
   margin: 2rem 0;
-  font-size: 1.618rem;
+  width: 15rem;
+  max-width: 500px;
+  font-size: 1rem;
+  letter-spacing: 3px;
   font-weight: var(--fw-bold);
   text-transform: uppercase;
   background-color: var(--accent);
   color: var(--off-black);
+  border: none;
   border-radius: 99px;
 }
 
-.button:hover,
-.button:active {
+button:hover,
+button:focus,
+button:active {
   background-color: var(--accent-hover);
   cursor: pointer;
+  color: var(--off-white);
+  -webkit-box-shadow: 15px 15px 21px -16px rgba(36, 47, 60, 1);
+  -moz-box-shadow: 15px 15px 21px -16px rgba(36, 47, 60, 1);
+  box-shadow: 15px 15px 21px -16px rgba(36, 47, 60, 1);
 }
 
-
-
+button:active {
+  -webkit-transform: translate(0px, 4px);
+  -moz-transform: translate(0px, 4px);
+  -ms-transform: translate(0px, 4px);
+  -o-transform: translate(0px, 4px);
+  transform: translate(0px, 4px);
+}
 
 /********************** images **********************/
 
@@ -216,128 +224,75 @@ header {
   position: fixed;
   top: 0;
   width: 100vw;
-  background-color: var(--light-peach);
   z-index: 1;
-  transition: top 0.3s;
-
 }
 
 header .content {
-  display: flex;
-  align-items: center;
-  height: 3rem;
-  background-color: white;
+  background-color: var(--off-black);
+  -webkit-box-shadow: 0px 0px 24px 0px rgba(36, 47, 60, 1);
+  -moz-box-shadow: 0px 0px 24px 0px rgba(36, 47, 60, 1);
+  box-shadow: 0px 0px 24px 0px rgba(36, 47, 60, 1);
 }
 
-header .logo {
-  width: 7rem;
-  height: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: auto;
-  padding: 0 2rem;
-  background-color: black;
-  color: white;
-}
 
 header nav ul {
-  display: flex;
-  height: 3rem;
-  padding: 0 2rem;
+  display: flex; /* change this */
 }
 
 nav li {
-  padding: 0 2rem;
-  height: 3rem;
+  padding: 0 1.2rem;
+  height: 3.5rem;
   display: flex;
+  flex-grow: 1;
   justify-content: center;
   align-items: center;
+
 }
 
 nav ul li:hover {
-  background-color: black;
-  color: white;
+  background-color: var(--accent);
+  color: var(--off-black);
 }
 
 nav a {
   font-size: 1rem;
-  color: var(--dark-brown);
+  color: var(--off-white);
 }
 
-header a:active,
-header a:hover {
-  color: white;
-  background-color: black;
-}
+/********************** sections **********************/
 
-/********************** hero **********************/ 
-
-.banner {
-  width: 100vw;
-  position: relative;
-  top: 3rem;
-  background-image:
-    linear-gradient(to left, rgba(136, 173, 215, 0), rgba(74, 74, 74, 0.9)),
-    url('../images/Hero.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-
-
-
-
-
-/* hero Section */
-
-#sign-up-section {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  height: 95vh;
-}
-
-#sign-up-cta {
-  padding: 0 5rem 2.5rem 5rem;
-  border-radius: 8px;
-  background-color: var(--olive-green);
-  opacity: 85%;
-  -webkit-box-shadow: 0px 4px 24px 0px rgba(40, 39, 39, 1);
-  -moz-box-shadow: 0px 4px 24px 0px rgba(40, 39, 39, 1);
-  box-shadow: 0px 4px 24px 0px rgba(40, 39, 39, 1);
+/* hero section */
+hgroup {
+  width: 80vw;
   margin: auto;
 }
 
-#sign-up-cta:hover {
-  opacity: 100%;
-}
-
-#sign-up-cta .content {
-  width: 25.625rem;
+hgroup p {
   margin-top: 2rem;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.25rem;
-  line-height: 1.4;
-  color: white;
 }
 
-strong {
-  font-weight: var(--fw-bold);
+#sign-up-section {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  top: 3.5rem;
+  background-image:
+    linear-gradient(180deg, rgba(248, 253, 254, 0) 0%, rgba(11, 15, 19, 1) 100%),
+    url('../images/Hero.png');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  justify-content: center;
+  align-content: center;
 }
 
-.accent {
-  letter-spacing: 3px;
-  font-size: 1rem;
+heading>h1 {
   text-align: center;
+
 }
 
-.striking {
-  font-family: "azonixregular", Arial, sans-serif;
-  padding-bottom: .75rem;
-  text-align: center;
-}
+
 
 
 
@@ -560,7 +515,7 @@ blockquote {
 }
 
 .accordionTitle:hover {
-  background-color:rgba(74, 74, 74, 0.9);
+  background-color: rgba(74, 74, 74, 0.9);
   color: white;
 }
 
@@ -578,12 +533,12 @@ blockquote {
   line-height: 1.5rem;
 }
 
-.accordionTitle + .accordionContent {
-	display: none;
+.accordionTitle+.accordionContent {
+  display: none;
 }
 
-.accordionTitle.is-open + .accordionContent {
-	display: block;
+.accordionTitle.is-open+.accordionContent {
+  display: block;
 }
 
 /* about us section */
