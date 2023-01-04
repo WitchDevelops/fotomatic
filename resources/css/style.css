@@ -8,6 +8,7 @@
   --grey-light: #E3E3E4;
   --accent: #8CE8D3;
   --accent-hover: #26BC98;
+  --grey-dark: #a0a6ad;
   --grey-v-dark: #242F3C;
   --off-black: #0B0F13;
 
@@ -49,17 +50,34 @@ html {
 
 h1 {
   font-family: var(--ff-fancy);
-  font-size: 424%;
+  font-size: 4.236rem;
   text-align: center;
   padding: 1rem 0;
 }
 
+h2,
+h3,
+p {
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-family: var(--ff-fancy);
+  font-size: 4.236rem;
+  line-height: 7rem;
+}
+
+h3 {
+  color: var(--accent-hover);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  margin: 2rem 0;
+}
+
 p {
   font-size: 1rem;
-  line-height: 1.7rem;
-  font-weight: var(--regular);
-  max-width: 40ch;
-  letter-spacing: 2px;
+  font-weight: var(--fw-thin);
+
 }
 
 /* additional typography styles */
@@ -167,13 +185,16 @@ strong {
   }
 }
 
+
+/* ______________________________________________________________________ .on-scroll animation ADDDDDDD
+*/
+
 /********************** buttons **********************/
 
 button {
   padding: 1.5rem;
   margin: 2rem 0;
   width: 15rem;
-  max-width: 500px;
   font-size: 1rem;
   letter-spacing: 3px;
   font-weight: var(--fw-bold);
@@ -246,7 +267,8 @@ header .content {
 }
 
 header nav ul {
-  display: flex; /* change this */
+  display: flex;
+  /* change this */
 }
 
 nav li {
@@ -282,9 +304,12 @@ ul li {
 }
 
 li:last-child {
-  margin-left: auto;
+ 
+  margin-left: auto; push it to right side
   margin-right: 2em;
 } 
+
+If you make you a elements inline-block you can change their width or just use a flex-basis you like, starting point.
 
 */
 
@@ -297,7 +322,9 @@ hgroup {
 }
 
 hgroup p {
-  margin-top: 2rem;
+  margin: 2rem auto;
+  max-width: 40ch;
+
 }
 
 p:nth-last-child(2) {
@@ -324,7 +351,7 @@ heading>h1 {
   text-align: center;
 }
 
-hgroup > button {
+hgroup>button {
   display: block;
   margin: auto;
 }
@@ -334,6 +361,7 @@ hgroup > button {
 #features-section {
   display: flex;
   flex-direction: column;
+  margin-top: 3.5rem;
   background-color: var(--off-black);
 }
 
@@ -354,65 +382,21 @@ hgroup > button {
   text-align: center;
 }
 
-.feature h2 {
-  padding-bottom: .5rem;
-  font-size: 2.25rem;
-}
-
-.feature h3 {
-  font-size: 1rem;
-  line-height: 1.2;
-}
-
-@media only screen and (max-width: 890px) {
-  .feature h2 {
-    font-size: 1.125rem;
-    line-height: 1.3;
-    font-weight: normal;
-  }
-
-  .feature h3 {
-    font-size: .875rem;
-    line-height: 1.4;
-  }
-}
-
-@media only screen and (max-width: 760px) {
-  #features-section {
-    flex-flow: column;
-    padding: 0;
-  }
-
-  .feature {
-    margin: 0;
-    padding: 1.25rem 1rem 0 1rem;
-  }
-}
-
 /* Filters Section */
 
 #filters-section {
-  background-color: var(--dark-brown);
+  color: var(--off-black);
+  background-color: var(--grey-light);
+}
+
+#filters-section article>h3 {
+  color: var(--accent-hover);
 }
 
 #filters-section .content {
-  padding: 4rem;
   text-align: center;
 }
 
-#filters-section .content h2 {
-  font-size: 2.25rem;
-  font-weight: bold;
-  color: white;
-}
-
-#filters-section .content h3 {
-  font-size: 1rem;
-  line-height: 1.4;
-  font-weight: 300;
-  color: white;
-  margin-top: 1rem;
-}
 
 #filters-section .images-container {
   display: flex;
@@ -456,8 +440,8 @@ hgroup > button {
 
 /* section container */
 #quotes-section {
-  width: 40vw;
-  margin: 5rem auto !important;
+  background-color: var(--accent-hover);
+  padding: 5rem;
   display: grid;
   grid-template-columns: 1fr 10fr 1fr;
   gap: 2rem;
@@ -476,7 +460,6 @@ hgroup > button {
 
 /* text element */
 blockquote {
-  font-family: "Palatino", serif;
   font-size: 1.5rem;
   line-height: 1.1;
   font-style: italic;
@@ -519,43 +502,38 @@ blockquote {
 /* FAQ section */
 
 #FAQ {
-  height: 70vh;
+  background-color: var(--off-black);
 }
+
 
 /* Style the buttons that are used to open and close the accordion panel */
 
 .accordionTitle {
-  background-color: #eee;
-  color: #444;
+  background-color: var(--grey-light);
+  color: var(--off-black);
+  width: 100%;
+  border-radius: unset;
   cursor: pointer;
-  width: 50%;
-  padding: 18px;
-  border: none;
   text-align: left;
-  outline: none;
-  font-size: 15px;
-
   display: block;
   margin: auto;
 }
 
 .accordionTitle:hover {
-  background-color: rgba(74, 74, 74, 0.9);
-  color: white;
+  background-color: var(--grey-dark);
 }
 
 .accordionContent {
-  font-family: inherit;
-  padding: 0 1.5rem;
-  background-color: white;
-  transition: max-height 0.2s ease-out;
-  width: 50%;
+
+  transition: max-height 0.2s ease-in;
+  width: 80%;
   margin: auto;
 }
 
 .accordionContent p {
   padding: 2rem;
   line-height: 1.5rem;
+  background-color: var(--off-black);
 }
 
 .accordionTitle+.accordionContent {
