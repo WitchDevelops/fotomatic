@@ -18,7 +18,7 @@
 </head>
 
 <body>
-  
+
 
   <!-- Top navbar -->
   <header>
@@ -56,21 +56,24 @@
         <p class="scale-in-center-d3">Sign up to get notified on launch on the <strong>Febuary
             2024</strong> release!
         </p>
-        <button class="scale-in-center-d4">sign up</button>
+        <a href="#sign-up"><button class="scale-in-center-d4">sign up</button></a>
       </hgroup>
+      <!--add the chevron thingy, make it off white-->
+      <img src="" />
     </section>
 
     <!-- Features Section -->
     <section id="features-section">
       <div class="feature center">
+        <h2 class="focus-in-contract on-scroll">Features</h2>
         <figure>
           <div class="image-container">
             <img src="./resources/images/feature-1.png"
-              alt="camera lens being held in a way one can look inside and see the shutter" loading="lazy"/>
+              alt="camera lens being held in a way one can look inside and see the shutter" loading="lazy" />
           </div>
           <figcaption class="content">
-            <h2>Advanced, automatic, instant</h2>
-            <h3>Shutter speed, apperture and flash output adjust automatically</h3>
+            <h3 class="focus-in-contract on-scroll">Advanced, automatic, instant</h3>
+            <p>Shutter speed, apperture and flash output adjust automatically</p>
           </figcaption>
         </figure>
       </div>
@@ -79,12 +82,12 @@
         <figure>
           <div class="image-container">
             <img src="./resources/images/feature-2.png"
-              alt="closeup of the camera lens that shows premium craftsmanship" loading="lazy"/>
+              alt="closeup of the camera lens that shows premium craftsmanship" loading="lazy" />
           </div>
           <figcaption class="content">
-            <h2>Beautifully crafted inside-out</h2>
-            <h3>From the paint outside to the tiny screw inside, Fotomatic is crafted with love and 20-year of
-              expertise</h3>
+            <h3 class="focus-in-contract on-scroll">Beautifully crafted inside-out</h3>
+            <p>From the paint outside to the tiny screw inside, Fotomatic is crafted with love and 20-year of
+              expertise</p>
           </figcaption>
         </figure>
       </div>
@@ -93,41 +96,47 @@
     <!-- Filters Section -->
     <section id="filters-section">
       <article class="content center">
-        <h2>Over 20+ filters to choose from</h2>
-        <h3>Feed your creativity with 20 different filter designed by our eclectic in-house photographers!</h3>
+        <h3>Over 20+ filters to choose from</h3>
+        <p>Feed your creativity with 20 different filter designed by our eclectic in-house photographers!</p>
       </article>
+
+      <!--implement a carousel-->
       <div class="images-container">
         <figure class="image-container">
           <img src="./resources/images/filter-1.png"
-            alt="example of filter 1, looks more soft and rosy. Focus on female hands holding a rose" loading="lazy"/>
+            alt="example of filter 1, looks more soft and rosy. Focus on female hands holding a rose" loading="lazy" />
         </figure>
         <figure class="image-container">
-          <img src="./resources/images/filter-2.png" alt="example of filter 2, cherry blossom" loading="lazy"/>
+          <img src="./resources/images/filter-2.png" alt="example of filter 2, cherry blossom" loading="lazy" />
         </figure>
         <figure class="image-container">
           <img src="./resources/images/filter-3.png"
-            alt="example of filter 3, purplish tint, man holding a vintage camera" loading="lazy"/>
+            alt="example of filter 3, purplish tint, man holding a vintage camera" loading="lazy" />
         </figure>
         <figure class="image-container extra">
-          <img src="./resources/images/filter-4.png" alt="example of filter 4, bluish mountain landscape" loading="lazy"/>
+          <img src="./resources/images/filter-4.png" alt="example of filter 4, bluish mountain landscape"
+            loading="lazy" />
         </figure>
       </div>
     </section>
 
     <!-- Quotes Section -->
     <section id="quotes-section">
-      <img id="quotation-icon" src="./resources/images/quote-open.png" alt="opening quotation mark icon" loading="lazy"/>
+      <img id="quotation-icon" src="./resources/images/quote-open.png" alt="opening quotation mark icon"
+        loading="lazy" />
       <blockquote>
         It’s truly something that could create a brand new photography Renaissance
       </blockquote>
       <img id="photo-society-logo" src="./resources/images/photography-logo.png"
         alt="logo of the Photography Society" />
-      <img id="quotation-background" src="./resources/images/quote-close.png" alt="closed quotation mark" aria-hidden loading="lazy"/>
+      <img id="quotation-background" src="./resources/images/quote-close.png" alt="closed quotation mark" aria-hidden
+        loading="lazy" />
     </section>
 
     <!--FAQ section-->
-    <section id="FAQ" class="content">
-      <h2 class="section-title">Frequently asked questions</h2>
+    <section id="FAQ">
+      <h2>FAQ</h2>
+      <p>Frequently asked questions and answers</p>
 
       <!--accordion tabs-->
       <div class="accordionItem">
@@ -189,44 +198,53 @@
     <!-- About Us section -->
     <section id="about" class="content">
       <h2 class="section-title">About us</h2>
-      <h3 class="section-subtitle">At Fotomatic, our mission is to empower photographers of all levels to capture and
+      <p class="section-subtitle">At Fotomatic, our mission is to empower photographers of all levels to capture and
         share their unique perspectives with the world. We believe that everyone has the ability to create beautiful,
         meaningful
         photographs, and our goal is to provide the tools and technology to make that possible. Our team is dedicated to
         creating high-quality, innovative cameras that are easy to use and accessible to all. We are committed to
-        pushing the boundaries of what is possible with photography and inspiring others to do the same.</h3>
+        pushing the boundaries of what is possible with photography and inspiring others to do the same.</p>
       <div class="team-cards">
         <div class="person-card image-container">
           <img src="./resources/images/staff/jessica.png" alt="woman with pink hair" loading="lazy" />
-          <h4 class="person-name">Allie</h4>
+          <h3 class="person-name">Allie</h3>
           <p>CEO</p>
-          <h3>Allie is a seasoned product developer with over a decade of experience in the tech industry. As the
+          <p>Allie is a seasoned product developer with over a decade of experience in the tech industry. As the
             <strong>CEO</strong> of the company, Allie is responsible for driving the overall strategy and vision for
             the camera.
-          </h3>
+          </p>
         </div>
         <div class="person-card image-container">
           <img src="./resources/images/staff/andy.png"
             alt="man from behind, wearing a beanie and looking at a mountainrange" loading="lazy" />
-          <h4 class="person-name">Andy</h4>
+          <h3 class="person-name">Andy</h3>
           <p>CTO</p>
-          <h3>Andy is a highly skilled electrical engineer with a passion for photography. As the CTO of the company, he
-            played a key role in the development and design of the camera's hardware and software.</h3>
+          <p>Andy is a highly skilled electrical engineer with a passion for photography. As the CTO of the company, he
+            played a key role in the development and design of the camera's hardware and software.</p>
         </div>
         <div class="person-card image-container">
-          <img src="./resources/images/staff/allie.png" alt="woman in a poncho, standing on a dirt road" loading="lazy" />
-          <h4 class="person-name">Jessica</h4>
+          <img src="./resources/images/staff/allie.png" alt="woman in a poncho, standing on a dirt road"
+            loading="lazy" />
+          <h3 class="person-name">Jessica</h3>
           <p>CMO</p>
-          <h3>Jessica is a marketing expert with a track record of successfully launching new products. As the CMO, she
+          <p>Jessica is a marketing expert with a track record of successfully launching new products. As the CMO, she
             is responsible for building buzz and driving demand for the camera through targeted campaigns and
-            partnerships.</h3>
+            partnerships.</p>
         </div>
       </div>
     </section>
 
     <!--second cta-->
-    <!--fix it-->
-    <button>Get notified on launch</button>
+    <section id="sign-up">
+      <form>
+        <fieldset>
+          <label for="email" class="sr-only">email</label>
+          <input type="email" id="email" id="email" placeholder="email" />
+        </fieldset>
+
+        <button type="submit">Get notified on launch</button>
+      </form>
+    </section>
 
   </main>
   <!-- Footer -->
@@ -238,7 +256,8 @@
     <p>Coded by Dominika Wojewska
       <a href="https://github.com/WitchDevelops" target="_blank" rel="noreferrer noopener">
         <span>
-          <img id="GitHub-logo" src="./resources/images/pngfind.com-github-logo-png-1766942.png" alt="GitHub logo" loading="lazy" />
+          <img id="GitHub-logo" src="./resources/images/pngfind.com-github-logo-png-1766942.png" alt="GitHub logo"
+            loading="lazy" />
         </span> WitchDevelops
       </a> © 2022
     </p>

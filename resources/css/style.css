@@ -8,6 +8,7 @@
   --grey-light: #E3E3E4;
   --accent: #8CE8D3;
   --accent-hover: #26BC98;
+  --grey-dark: #a0a6ad;
   --grey-v-dark: #242F3C;
   --off-black: #0B0F13;
 
@@ -35,6 +36,8 @@ html {
   color: var(--off-white);
   background-color: var(--grey-light);
   scroll-behavior: smooth;
+  scroll-snap-stop: always;
+  scroll-snap-type: y mandatory;
   overflow-x: hidden;
 }
 
@@ -49,17 +52,34 @@ html {
 
 h1 {
   font-family: var(--ff-fancy);
-  font-size: 424%;
+  font-size: 4.236rem;
   text-align: center;
   padding: 1rem 0;
 }
 
+h2,
+h3,
+p {
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-family: var(--ff-fancy);
+  font-size: 4.236rem;
+  line-height: 7rem;
+}
+
+h3 {
+  color: var(--accent-hover);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  margin: 2rem 0;
+}
+
 p {
   font-size: 1rem;
-  line-height: 1.7rem;
-  font-weight: var(--regular);
-  max-width: 40ch;
-  letter-spacing: 2px;
+  font-weight: var(--fw-thin);
+
 }
 
 /* additional typography styles */
@@ -72,7 +92,6 @@ strong {
   font-size: 0.7rem;
   text-align: center;
 }
-
 
 /********************** animations **********************/
 
@@ -169,13 +188,16 @@ strong {
 }
 
 
+/* ______________________________________________________________________ .on-scroll animation ADDDDDDD
+*/
+
 /********************** buttons **********************/
 
 button {
   padding: 1.5rem;
-  margin: 2rem 0;
+  display: block;
+  margin: 2rem auto;
   width: 15rem;
-  max-width: 500px;
   font-size: 1rem;
   letter-spacing: 3px;
   font-weight: var(--fw-bold);
@@ -185,7 +207,7 @@ button {
   color: var(--off-black);
   border: none;
   border-radius: 99px;
-  transition: all ease-in-out 500ms;
+  transition: all ease-in-out 100ms;
 }
 
 button:hover,
@@ -247,9 +269,9 @@ header .content {
   box-shadow: 0px 0px 24px -4px rgba(36, 47, 60, 1);
 }
 
-
 header nav ul {
-  display: flex; /* change this */
+  display: flex;
+  /* change this */
 }
 
 nav li {
@@ -259,7 +281,6 @@ nav li {
   flex-grow: 1;
   justify-content: center;
   align-items: center;
-
 }
 
 nav ul li:hover {
@@ -272,7 +293,36 @@ nav a {
   color: var(--off-white);
 }
 
+/* try this from Carlos
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  padding: 0.5em 2em;
+}
+
+ul li {
+  flex: 0 1 auto; 
+}
+
+li:last-child {
+ 
+  margin-left: auto; push it to right side
+  margin-right: 2em;
+} 
+
+If you make you a elements inline-block you can change their width or just use a flex-basis you like, starting point.
+
+*/
+
 /********************** sections **********************/
+
+section {
+  -webkit-box-shadow: 0px 0px 24px -4px rgba(227, 227, 228, 1);
+  -moz-box-shadow: 0px 0px 24px -4px rgba(227, 227, 228, 1);
+  box-shadow: 0px 0px 24px -4px rgba(227, 227, 228, 1);
+}
 
 /* hero section */
 hgroup {
@@ -281,7 +331,12 @@ hgroup {
 }
 
 hgroup p {
-  margin-top: 2rem;
+  margin: 2rem auto;
+  max-width: 40ch;
+}
+
+p:nth-last-child(2) {
+  margin-bottom: 3rem
 }
 
 #sign-up-section {
@@ -302,25 +357,22 @@ hgroup p {
 
 heading>h1 {
   text-align: center;
-
 }
 
-
-
-
+hgroup>button {
+  display: block;
+  margin: auto;
+}
 
 /* Features Section */
 
 #features-section {
   display: flex;
-  justify-content: space-between;
-  background-color: var(--light-peach);
+  flex-direction: column;
+  margin-top: 3.5rem;
+  background-color: var(--off-black);
 }
 
-.feature {
-  flex-shrink: 1;
-  width: 50%;
-}
 
 .feature .image-container {
   flex-shrink: 1;
@@ -338,69 +390,21 @@ heading>h1 {
   text-align: center;
 }
 
-.feature h2 {
-  padding-bottom: .5rem;
-  font-size: 2.25rem;
-  font-weight: bold;
-  color: var(--dark-brown);
-}
-
-.feature h3 {
-  font-size: 1rem;
-  line-height: 1.2;
-  font-weight: 300;
-  color: var(--dark-brown)
-}
-
-@media only screen and (max-width: 890px) {
-  .feature h2 {
-    font-size: 1.125rem;
-    line-height: 1.3;
-    font-weight: normal;
-  }
-
-  .feature h3 {
-    font-size: .875rem;
-    line-height: 1.4;
-  }
-}
-
-@media only screen and (max-width: 760px) {
-  #features-section {
-    flex-flow: column;
-    padding: 0;
-  }
-
-  .feature {
-    margin: 0;
-    padding: 1.25rem 1rem 0 1rem;
-  }
-}
-
 /* Filters Section */
 
 #filters-section {
-  background-color: var(--dark-brown);
+  color: var(--off-black);
+  background-color: var(--grey-light);
+}
+
+#filters-section article>h3 {
+  color: var(--accent-hover);
 }
 
 #filters-section .content {
-  padding: 4rem;
   text-align: center;
 }
 
-#filters-section .content h2 {
-  font-size: 2.25rem;
-  font-weight: bold;
-  color: white;
-}
-
-#filters-section .content h3 {
-  font-size: 1rem;
-  line-height: 1.4;
-  font-weight: 300;
-  color: white;
-  margin-top: 1rem;
-}
 
 #filters-section .images-container {
   display: flex;
@@ -444,8 +448,8 @@ heading>h1 {
 
 /* section container */
 #quotes-section {
-  width: 40vw;
-  margin: 5rem auto !important;
+  background-color: var(--accent-hover);
+  padding: 5rem;
   display: grid;
   grid-template-columns: 1fr 10fr 1fr;
   gap: 2rem;
@@ -464,7 +468,6 @@ heading>h1 {
 
 /* text element */
 blockquote {
-  font-family: "Palatino", serif;
   font-size: 1.5rem;
   line-height: 1.1;
   font-style: italic;
@@ -507,43 +510,41 @@ blockquote {
 /* FAQ section */
 
 #FAQ {
-  height: 70vh;
+  background-color: var(--off-black);
+  -webkit-box-shadow: 0px 0px 24px -4px rgba(227, 227, 228, 1);
+  -moz-box-shadow: 0px 0px 24px -4px rgba(227, 227, 228, 1);
+  box-shadow: 0px 0px 24px -4px rgba(227, 227, 228, 1);
 }
+
 
 /* Style the buttons that are used to open and close the accordion panel */
 
 .accordionTitle {
-  background-color: #eee;
-  color: #444;
+  background-color: var(--grey-light);
+  color: var(--off-black);
+  width: 100%;
+  border-radius: unset;
   cursor: pointer;
-  width: 50%;
-  padding: 18px;
-  border: none;
   text-align: left;
-  outline: none;
-  font-size: 15px;
-
   display: block;
   margin: auto;
 }
 
 .accordionTitle:hover {
-  background-color: rgba(74, 74, 74, 0.9);
-  color: white;
+  background-color: var(--grey-dark);
 }
 
 .accordionContent {
-  font-family: inherit;
-  padding: 0 1.5rem;
-  background-color: white;
-  transition: max-height 0.2s ease-out;
-  width: 50%;
+
+  transition: max-height 0.2s ease-in;
+  width: 80%;
   margin: auto;
 }
 
 .accordionContent p {
   padding: 2rem;
   line-height: 1.5rem;
+  background-color: var(--off-black);
 }
 
 .accordionTitle+.accordionContent {
@@ -560,23 +561,15 @@ blockquote {
   width: 100vw;
   background-image:
     linear-gradient(to bottom, rgba(136, 173, 215, 0), rgba(74, 74, 74, 0.9)),
-    url('../images/pexels-alex-andrews-1203803.jpg');
+    url('../images/pexels-alex-andrews-1983037.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  color: white;
+  color: var(--off-black);
+  -webkit-box-shadow: 0px 0px 24px -4px rgba(227, 227, 228, 1);
+  -moz-box-shadow: 0px 0px 24px -4px rgba(227, 227, 228, 1);
+  box-shadow: 0px 0px 24px -4px rgba(227, 227, 228, 1);
 }
 
-@media screen and (min-width: 430px) {
-  #about {
-    padding: 4rem 0;
-  }
-}
-
-
-#about h3 {
-
-  margin: 2rem auto 3.5rem auto;
-}
 
 /* flex container */
 .team-cards {
@@ -584,18 +577,9 @@ blockquote {
   flex-direction: column;
   align-content: center;
   align-items: center;
-  width: 70%;
   margin: auto;
 }
 
-
-@media screen and (min-width: 430px) {
-  .team-cards {
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 3rem;
-  }
-}
 
 .person-card {
   background-color: rgba(151, 151, 151, 0.5);
@@ -603,8 +587,6 @@ blockquote {
   backdrop-filter: blur(10px);
   border-radius: 8px;
   padding: 3rem;
-  height: 470px;
-  width: 30%;
 }
 
 .person-card img {
@@ -633,37 +615,62 @@ blockquote {
 }
 
 
+/* sign-up section */
 
-
-
-/* ipad!!! 
-
-@media screen and (min-width: 430px) {
-  .person-card {
-    padding: 2rem;
-    width: 30%;
-  }
+#sign-up {
+  background-color: var(--off-black);
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  padding: 5rem;
 }
 
-#about .team-cards .person-card h3 {
-  text-align: left;
-  margin-top: 1.5rem;
-  font-size: 1rem;
+.sr-only {
+  display: none;
 }
 
-p {
-  margin-top: 2rem;
-} */
+form {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: var(--grey-light);
+  padding: 5rem;
+  color: var(--off-black);
+  border-radius: 16px;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  background-color: var(--grey-light);
+  color: var(--grey-v-dark);
+  padding: 1.5rem;
+  border: solid 1px var(--grey-dark);
+  border-radius: 999px;
+  width: 100%;
+}
+
+form button {
+  width: 100%;
+}
+
 
 /* Footer */
 
 footer {
-  background-color: var(--darkest-brown);
+  background-color: var(--off-black);
   padding: 1.5rem 2rem;
+  -webkit-box-shadow: 0px 0px 24px -4px rgba(227, 227, 228, 1);
+  -moz-box-shadow: 0px 0px 24px -4px rgba(227, 227, 228, 1);
+  box-shadow: 0px 0px 24px -4px rgba(227, 227, 228, 1);
 }
 
 footer .content {
-  color: white;
+  color: var(--off-white);
   display: flex;
   font-size: .75rem;
   padding-bottom: 1rem;
@@ -674,26 +681,17 @@ footer .copyright {
 }
 
 footer p {
-  color: white;
+  color: var(--accent);
   text-align: center;
   padding: 1rem;
 }
 
-footer a {
-  color: white;
-}
-
 footer a:hover,
+footer a:focus,
 footer a:active {
-  color: var(--lightest-brown);
+  color: var(--accent-hover);
 }
 
 #GitHub-logo {
   height: 1rem;
-}
-
-@media only screen and (min-width: 760px) {
-  footer .content {
-    font-size: .625rem;
-  }
 }
