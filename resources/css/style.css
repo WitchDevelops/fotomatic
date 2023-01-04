@@ -550,23 +550,12 @@ blockquote {
   width: 100vw;
   background-image:
     linear-gradient(to bottom, rgba(136, 173, 215, 0), rgba(74, 74, 74, 0.9)),
-    url('../images/pexels-alex-andrews-1203803.jpg');
+    url('../images/pexels-alex-andrews-1983037.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  color: white;
+  color: var(--off-black);
 }
 
-@media screen and (min-width: 430px) {
-  #about {
-    padding: 4rem 0;
-  }
-}
-
-
-#about h3 {
-
-  margin: 2rem auto 3.5rem auto;
-}
 
 /* flex container */
 .team-cards {
@@ -574,18 +563,9 @@ blockquote {
   flex-direction: column;
   align-content: center;
   align-items: center;
-  width: 70%;
   margin: auto;
 }
 
-
-@media screen and (min-width: 430px) {
-  .team-cards {
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 3rem;
-  }
-}
 
 .person-card {
   background-color: rgba(151, 151, 151, 0.5);
@@ -593,8 +573,6 @@ blockquote {
   backdrop-filter: blur(10px);
   border-radius: 8px;
   padding: 3rem;
-  height: 470px;
-  width: 30%;
 }
 
 .person-card img {
@@ -623,37 +601,59 @@ blockquote {
 }
 
 
+/* sign-up section */
 
-
-
-/* ipad!!! 
-
-@media screen and (min-width: 430px) {
-  .person-card {
-    padding: 2rem;
-    width: 30%;
-  }
+#sign-up {
+  background-color: var(--off-black);
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  padding: 5rem;
 }
 
-#about .team-cards .person-card h3 {
-  text-align: left;
-  margin-top: 1.5rem;
-  font-size: 1rem;
+.sr-only {
+  display: none;
 }
 
-p {
-  margin-top: 2rem;
-} */
+form {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: var(--grey-light);
+  padding: 5rem;
+  color: var(--off-black);
+  border-radius: 16px;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  background-color: var(--grey-light);
+  color: var(--grey-v-dark);
+  padding: 1.5rem;
+  border: solid 1px var(--grey-dark);
+  border-radius: 999px;
+  width: 100%;
+}
+
+form button {
+  width: 100%;
+}
+
 
 /* Footer */
 
 footer {
-  background-color: var(--darkest-brown);
+  background-color: var(--off-black);
   padding: 1.5rem 2rem;
 }
 
 footer .content {
-  color: white;
+  color: var(--off-white);
   display: flex;
   font-size: .75rem;
   padding-bottom: 1rem;
@@ -664,26 +664,16 @@ footer .copyright {
 }
 
 footer p {
-  color: white;
+  color: var(--accent);
   text-align: center;
   padding: 1rem;
 }
 
-footer a {
-  color: white;
-}
-
 footer a:hover,
 footer a:active {
-  color: var(--lightest-brown);
+  color: var(--accent-hover);
 }
 
 #GitHub-logo {
   height: 1rem;
-}
-
-@media only screen and (min-width: 760px) {
-  footer .content {
-    font-size: .625rem;
-  }
 }
