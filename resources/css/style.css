@@ -36,6 +36,8 @@ html {
   color: var(--off-white);
   background-color: var(--grey-light);
   scroll-behavior: smooth;
+  scroll-snap-stop: always;
+  scroll-snap-type: y mandatory;
   overflow-x: hidden;
 }
 
@@ -193,7 +195,8 @@ strong {
 
 button {
   padding: 1.5rem;
-  margin: 2rem 0;
+  display: block;
+  margin: 2rem auto;
   width: 15rem;
   font-size: 1rem;
   letter-spacing: 3px;
@@ -204,7 +207,7 @@ button {
   color: var(--off-black);
   border: none;
   border-radius: 99px;
-  transition: all ease-in-out 500ms;
+  transition: all ease-in-out 100ms;
 }
 
 button:hover,
@@ -315,6 +318,12 @@ If you make you a elements inline-block you can change their width or just use a
 
 /********************** sections **********************/
 
+section {
+  -webkit-box-shadow: 0px 0px 24px -4px rgba(227, 227, 228, 1);
+  -moz-box-shadow: 0px 0px 24px -4px rgba(227, 227, 228, 1);
+  box-shadow: 0px 0px 24px -4px rgba(227, 227, 228, 1);
+}
+
 /* hero section */
 hgroup {
   width: 80vw;
@@ -324,7 +333,6 @@ hgroup {
 hgroup p {
   margin: 2rem auto;
   max-width: 40ch;
-
 }
 
 p:nth-last-child(2) {
@@ -503,6 +511,9 @@ blockquote {
 
 #FAQ {
   background-color: var(--off-black);
+  -webkit-box-shadow: 0px 0px 24px -4px rgba(227, 227, 228, 1);
+  -moz-box-shadow: 0px 0px 24px -4px rgba(227, 227, 228, 1);
+  box-shadow: 0px 0px 24px -4px rgba(227, 227, 228, 1);
 }
 
 
@@ -554,6 +565,9 @@ blockquote {
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--off-black);
+  -webkit-box-shadow: 0px 0px 24px -4px rgba(227, 227, 228, 1);
+  -moz-box-shadow: 0px 0px 24px -4px rgba(227, 227, 228, 1);
+  box-shadow: 0px 0px 24px -4px rgba(227, 227, 228, 1);
 }
 
 
@@ -650,6 +664,9 @@ form button {
 footer {
   background-color: var(--off-black);
   padding: 1.5rem 2rem;
+  -webkit-box-shadow: 0px 0px 24px -4px rgba(227, 227, 228, 1);
+  -moz-box-shadow: 0px 0px 24px -4px rgba(227, 227, 228, 1);
+  box-shadow: 0px 0px 24px -4px rgba(227, 227, 228, 1);
 }
 
 footer .content {
@@ -670,6 +687,7 @@ footer p {
 }
 
 footer a:hover,
+footer a:focus,
 footer a:active {
   color: var(--accent-hover);
 }
