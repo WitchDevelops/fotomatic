@@ -21,6 +21,5 @@ First, design. it was dated, so I tweaked it a bit. Then, accessibility. Starter
 * simple sign-up form for a mailing list using POST method.
 
 # TO-DO
-* add email form
-* fix accordion styling
+
 * fix responsiveness
