@@ -23,3 +23,9 @@ First, design. it was dated, so I tweaked it a bit. Then, accessibility. Starter
 # TO-DO
 
 * fix responsiveness
+
+# What I learned
+
+How to make accordion with JavaScript. The code that closes all other accordion tags upon opening a new one is this:
+
+![accordion-code-snippet](/accordion-snippet.png)
